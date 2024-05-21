@@ -1,0 +1,7 @@
+{
+  "name" : "Doosya",
+  "species" : "Dog",
+  "favFoods" : ["meat", "porridge"],
+  "birthYear" : 2014,
+  "colour" : "brown"
+}
