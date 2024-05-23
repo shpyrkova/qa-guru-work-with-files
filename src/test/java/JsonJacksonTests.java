@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 
 import java.io.InputStreamReader;
 import java.io.Reader;
-import java.util.List;
 
 public class JsonJacksonTests {
 
@@ -24,7 +23,7 @@ public class JsonJacksonTests {
             Assertions.assertEquals("Dog", actual.getSpecies());
             Assertions.assertEquals(2014, actual.getBirthYear());
             Assertions.assertEquals("brown", actual.getColour());
-            Assertions.assertArrayEquals(new String[]{"meat", "porridge"}, actual.getFavFoods()); // выглядит не очень, как верно?
+            Assertions.assertArrayEquals(new String[]{"meat", "porridge"}, actual.getFavFoods());
 
         }
     }
