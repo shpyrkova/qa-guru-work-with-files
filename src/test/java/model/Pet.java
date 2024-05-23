@@ -1,14 +1,12 @@
 package model;
 
-import java.util.List;
-
 public class Pet {
 
     private String name;
     private String species;
     private Integer birthYear;
     private String colour;
-    private List<String> favFoods;
+    private String[]  favFoods;
 
     public String getName() {
         return name;
@@ -42,11 +40,11 @@ public class Pet {
         this.colour = colour;
     }
 
-    public Object[] getFavFoods() {
-        return new List[]{favFoods};
+    public String[] getFavFoods() {
+        return favFoods;
     }
 
-    public void setFavFoods(List<String> favFoods) {
+    public void setFavFoods(String[] favFoods) {
         this.favFoods = favFoods;
     }
 

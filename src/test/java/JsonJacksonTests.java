@@ -1,6 +1,7 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 import model.Pet;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.io.InputStreamReader;
@@ -12,6 +13,7 @@ public class JsonJacksonTests {
     private final ClassLoader cl = JsonJacksonTests.class.getClassLoader();
 
     @Test
+    @DisplayName("Проверка json объекта")
     void jsonFileParsingImprovedTest() throws Exception {
         try (Reader reader = new InputStreamReader(cl.getResourceAsStream("pet.json")
         )) {
@@ -22,7 +24,7 @@ public class JsonJacksonTests {
             Assertions.assertEquals("Dog", actual.getSpecies());
             Assertions.assertEquals(2014, actual.getBirthYear());
             Assertions.assertEquals("brown", actual.getColour());
-            Assertions.assertArrayEquals(new List[]{List.of(new String[]{"meat", "porridge"})}, actual.getFavFoods()); // выглядит не очень, как верно?
+            Assertions.assertArrayEquals(new String[]{"meat", "porridge"}, actual.getFavFoods()); // выглядит не очень, как верно?
 
         }
     }
