@@ -20,7 +20,7 @@ public class ZipFilesTests {
     @Test
     @DisplayName("Проверка контента csv файла в архиве")
     void checkCsvContentInZip() throws Exception {
-        try (ZipInputStream zis = new ZipInputStream(cl.getResourceAsStream("archive.zip"))) { // через ZipInputStream будет лучше?
+        try (ZipInputStream zis = new ZipInputStream(cl.getResourceAsStream("archive.zip"))) { 
             ZipEntry entry;
             while ((entry = zis.getNextEntry()) != null) {
                 if (entry.getName().equals("email.csv")) {
@@ -39,7 +39,7 @@ public class ZipFilesTests {
     @Test
     @DisplayName("Проверка контента xlsx файла в архиве")
     void checkXlsxContentInZip() throws Exception {
-        try (ZipInputStream zis = new ZipInputStream(cl.getResourceAsStream("archive.zip"))) { // через ZipInputStream будет лучше?
+        try (ZipInputStream zis = new ZipInputStream(cl.getResourceAsStream("archive.zip"))) { 
             ZipEntry entry;
             while ((entry = zis.getNextEntry()) != null) {
                 if (entry.getName().equals("file_example_XLSX_50.xlsx")) {
@@ -55,7 +55,7 @@ public class ZipFilesTests {
     @Test
     @DisplayName("Проверка контента pdf файла в архиве")
     void checkPdfContentInZip() throws Exception {
-        try (ZipInputStream zis = new ZipInputStream(cl.getResourceAsStream("archive.zip"))) { // через ZipInputStream будет лучше?
+        try (ZipInputStream zis = new ZipInputStream(cl.getResourceAsStream("archive.zip"))) { 
             ZipEntry entry;
             while ((entry = zis.getNextEntry()) != null) {
                 if (entry.getName().equals("file-sample_150kB.pdf")) {
